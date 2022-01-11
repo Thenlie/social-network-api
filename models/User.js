@@ -28,7 +28,9 @@ const UserSchema = new Schema({
     ]
 });
 
-//create friend count virtual
+UserSchema.virtual('friendCount').get(function() {
+    return this.friends.length
+})
 
 const User = model('user', UserSchema);
 

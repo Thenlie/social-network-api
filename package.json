@@ -1,7 +1,26 @@
 {
+  "name": "social-network-api",
+  "description": "An API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "express": "^4.17.2",
     "mongoose": "^6.1.6",
     "validator": "^13.7.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thenlie/social-network-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thenlie/social-network-api/issues"
+  },
+  "homepage": "https://github.com/Thenlie/social-network-api#readme"
 }
