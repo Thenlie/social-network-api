@@ -31,11 +31,11 @@
 
   Use the command `npm start` to start the server. Since there is no front end currently you will need to use an API client like Insomnia to see the API routes in action. Below is a video walk through of the application. 
 
-  User routes:
+  #### User Routes:
   [View on Google Drive](https://drive.google.com/file/d/168u0V3vOeK_Q1tEoqHnBfayLCqSlaHcO/view?usp=sharing)
   ![Program walk through 1 GIF](https://github.com/Thenlie/social-network-api/blob/main/assets/mod18-walkthrough-p1.gif) 
 
-  Thought Routes: 
+  #### Thought Routes: 
   [View on Google Drive](https://drive.google.com/file/d/1Dm6hpC4KV9XswmvebxGJ6arx3w4ifXvt/view?usp=sharing)
   ![Program walk through 1 GIF](https://github.com/Thenlie/social-network-api/blob/main/assets/mod18-walkthrough-p2.gif)  
 
