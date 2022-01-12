@@ -8,10 +8,10 @@
   },
   "dependencies": {
     "express": "^4.17.2",
+    "moment": "^2.29.1",
     "mongoose": "^6.1.6",
     "validator": "^13.7.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Thenlie/social-network-api.git"
