@@ -1,4 +1,4 @@
-const { User } = require('../models');
+const { User, Thought } = require('../models');
 
 const userController = {
     getAllUsers(req, res) {
@@ -10,7 +10,7 @@ const userController = {
         User.findOne({ _id: params.id })
             .then(data => {
                 if (!data) {
-                    res.status(404).json({ message: 'No user found with that ID!' })
+                    res.status(404).json({ message: 'No user found with that ID!' });
                 }
                 res.json(data);
             })
@@ -25,7 +25,7 @@ const userController = {
         User.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })
             .then(data => {
                 if (!data) {
-                    res.status(404).json({ message: 'No user found with that ID!' })
+                    res.status(404).json({ message: 'No user found with that ID!' });
                 }
                 res.json(data);
             })
@@ -33,9 +33,12 @@ const userController = {
     },
     deleteUser({ params }, res) {
         User.findOneAndDelete({ _id: params.id })
+            .then(user => {
+                return Thought.deleteMany({ _id: { $in: user.thoughts }});
+            })
             .then(data => {
                 if (!data) {
-                    res.status(404).json({ message: 'No user found with that ID!' })
+                    res.status(404).json({ message: 'No user found with that ID!' });
                 }
                 res.json(data);
             })
@@ -45,7 +48,7 @@ const userController = {
         User.findOneAndUpdate({ _id: params.id }, { $push: { friends: params.fid }}, { new: true })
             .then(data => {
                 if (!data) {
-                    res.status(404).json({ message: 'No user found with that ID!' })
+                    res.status(404).json({ message: 'No user found with that ID!' });
                 }
                 res.json(data);
             })
@@ -55,7 +58,7 @@ const userController = {
         User.findOneAndUpdate({ _id: params.id }, { $pull: { friends: params.fid }}, { new: true })
             .then(data => {
                 if (!data) {
-                    res.status(404).json({ message: 'No user found with that ID!' })
+                    res.status(404).json({ message: 'No user found with that ID!' });
                 }
                 res.json(data);
             })
